@@ -1,0 +1,472 @@
+.option{
+    background-color: ehite;
+    height:700px;
+}
+
+.option1 {
+    margin-top:45vh;
+margin-left:45vw;
+    color: gainsboro;
+   font-family:serif;
+    font-weight: lighter;
+    font-size: 30px;
+ -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.option11{
+    color:black;
+    font-size: 45px;
+}
+
+.philosophy{
+    background-color: white;
+    height:550px;
+      font-size:14px; 
+}
+
+.ph{
+font-weight:bold;
+    margin-top:-40px;
+}
+.philosophy h4{
+    font-family:serif;
+    margin-left:7vw;
+    font-weight:lighter;
+    height:500px;
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+
+/*section3*/
+.oya3 {
+    background-color: white;
+}
+.uu {
+    font-size:21px;
+    width:1100px;
+    margin-bottom:-140px;
+margin-right:100px;   
+    -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+    font-family:serif;
+}
+
+
+/*kard*/
+@charset "utf-8";
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+input[name="slideshow"] {
+    display: none;
+}
+
+/* :::::: slideContents :::::: */
+.slideContents {
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: transform .6s;
+}
+
+.slideContents section {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    width: 90%;
+    transform: translateX(100%);
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.slideContents section img {
+    width: 750px;
+    height: 500px;
+    object-fit: cover;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-bottom: 70px;
+}
+
+/* :::::: arrows :::::: */
+.arrow,
+.arrow label,
+.arrow .ico {
+    position: absolute;
+}
+
+.arrow {
+    top: 0;
+    margin-left: 15%;
+    margin-right: 13%;
+    transition: background .3s;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.arrow,
+.arrow label {
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+}
+
+.arrow label {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.arrow .ico {
+    top: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid black;
+    opacity: 0;
+}
+
+.prev .ico {
+    left: 50%;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    transition: left .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+
+.next .ico {
+    right: 50%;
+    border-right: 3px solid black;
+    transform: rotate(45deg);
+    transition: right .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+
+.arrow .ico {
+    opacity: .6;
+}
+
+.prev .ico {
+    left: calc(50% - 6px);
+}
+
+.next.ico {
+    right: calc(50% - 6px);
+}
+
+/* :::::: mechanism :::::: */
+#switch1:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide4 {
+    position: relative;
+    transform: none;
+}
+
+#switch1:checked ~ .slideContents #slide4,
+#switch1:checked ~ .slideContents #slide3,
+#switch1:checked ~ .slideContents #slide2,
+#switch2:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide3,
+#switch3:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide1,
+#switch3:checked ~ .slideContents #slide4,
+#switch4:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide2,
+#switch4:checked ~ .slideContents #slide1,
+
+    {
+    transform: translateX(-100%);
+    transition-duration: 0s;
+}
+
+#switch1:checked ~ .slideContents #slide2,
+#switch1:checked ~ .slideContents #slide3,
+#switch2:checked ~ .slideContents #slide3,
+#switch2:checked ~ .slideContents #slide4,
+#switch3:checked ~ .slideContents #slide4,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide2 {
+    transition-duration: 0s;
+}
+
+/* :::::: arrow mechanism :::::: */
+.arrow label {
+    pointer-events: none;
+}
+
+#switch1:checked ~ .prev label[for="switch4"],
+#switch2:checked ~ .prev label[for="switch1"],
+#switch3:checked ~ .prev label[for="switch2"],
+#switch4:checked ~ .prev label[for="switch3"],
+#switch1:checked ~ .next label[for="switch2"],
+#switch2:checked ~ .next label[for="switch3"],
+#switch3:checked ~ .next label[for="switch4"],
+#switch4:checked ~ .next label[for="switch1"] {
+    pointer-events: auto;
+}
+
+/*kardmotion finish*/
+.kard3 {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+
+.kard3 img {
+    width: 100px;
+    overflow: hidden;
+}
+
+.kard3 h3 {
+    color: white;
+    font-family: UD Digi Kyokasho NK-R;
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 20px 0 40px 0;
+}
+
+/*section4*/
+.oya4{
+    height:700px;
+    background-color:white;
+}
+
+/*kard*/
+@charset "utf-8";
+
+.sslideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+input[name="sslideshow"] {
+    display: none;
+}
+
+/* :::::: slideContents :::::: */
+.sslideContents {
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: transform .6s;
+}
+
+.sslideContents section {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    width: 90%;
+    transform: translateX(100%);
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.sslideContents section img {
+    width: 750px;
+    height: 500px;
+    object-fit: cover;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-bottom: 70px;
+}
+
+/* :::::: arrows :::::: */
+.aarrow,
+.aarrow label,
+.aarrow .iico {
+    position: absolute;
+}
+
+.aarrow {
+    top: 0;
+    margin-left: 15%;
+    margin-right: 13%;
+    transition: background .3s;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.aarrow:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.aarrow,
+.aarrow label {
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+}
+
+.aarrow label {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.aarrow .iico {
+    top: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid black;
+    opacity: 0;
+}
+
+.prev .iico {
+    left: 50%;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    transition: left .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+
+.next .iico {
+    right: 50%;
+    border-right: 3px solid black;
+    transform: rotate(45deg);
+    transition: right .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+
+.aarrow .iico {
+    opacity: .6;
+}
+
+.prev .iico {
+    left: calc(50% - 6px);
+}
+
+.next.iico {
+    right: calc(50% - 6px);
+}
+
+/* :::::: mechanism :::::: */
+#sswitch1:checked ~ .sslideContents #sslide1,
+#sswitch2:checked ~ .sslideContents #sslide2,
+#sswitch3:checked ~ .sslideContents #sslide3,
+#sswitch4:checked ~ .sslideContents #sslide4 {
+    position: relative;
+    transform: none;
+}
+
+#sswitch1:checked ~ .sslideContents #sslide4,
+#sswitch1:checked ~ .sslideContents #sslide3,
+#sswitch1:checked ~ .sslideContents #sslide2,
+#sswitch2:checked ~ .sslideContents #sslide1,
+#sswitch2:checked ~ .sslideContents #sslide4,
+#sswitch2:checked ~ .sslideContents #sslide3,
+#sswitch3:checked ~ .sslideContents #sslide2,
+#sswitch3:checked ~ .sslideContents #sslide1,
+#sswitch3:checked ~ .sslideContents #sslide4,
+#sswitch4:checked ~ .sslideContents #sslide3,
+#sswitch4:checked ~ .sslideContents #sslide2,
+#sswitch4:checked ~ .sslideContents #sslide1,
+
+    {
+    transform: translateX(-100%);
+    transition-duration: 0s;
+}
+
+#sswitch1:checked ~ .sslideContents #sslide2,
+#sswitch1:checked ~ .sslideContents #sslide3,
+#sswitch2:checked ~ .sslideContents #sslide3,
+#sswitch2:checked ~ .sslideContents #sslide4,
+#sswitch3:checked ~ .sslideContents #sslide4,
+#sswitch3:checked ~ .sslideContents #sslide1,
+#sswitch4:checked ~ .sslideContents #sslide1,
+#sswitch4:checked ~ .sslideContents #sslide2 {
+    transition-duration: 0s;
+}
+
+/* :::::: arrow mechanism :::::: */
+.aarrow label {
+    pointer-events: none;
+}
+
+#sswitch1:checked ~ .prev label[for="sswitch4"],
+#sswitch2:checked ~ .prev label[for="sswitch1"],
+#sswitch3:checked ~ .prev label[for="sswitch2"],
+#sswitch4:checked ~ .prev label[for="sswitch3"],
+#sswitch1:checked ~ .next label[for="sswitch2"],
+#sswitch2:checked ~ .next label[for="sswitch3"],
+#sswitch3:checked ~ .next label[for="sswitch4"],
+#sswitch4:checked ~ .next label[for="sswitch1"] {
+    pointer-events: auto;
+}
+
+/*kardmotion finish*/
+.kkard3 {
+    margin:0 0 10px 0;
+    overflow: hidden;
+}
+
+.kkard3 img {
+    width: 100px;
+    overflow: hidden;
+}
+
+.kkard3 h3 {
+    color: white;
+    font-family: UD Digi Kyokasho NK-R;
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 20px 0 40px 0;
+}
+.uuu {
+    font-size:21px;
+    width:1100px;
+margin-right:100px;   
+    -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+    font-family:serif;
+}
+.phh{
+    margin-top:30px;
+font-weight:bold;
+    margin-bottom:  -300px;
+}
+.pph{
+font-weight:bold;
+    font-size:20px;
+    margin-top:-30px;
+}
+.philosophy h6{
+    margin-top:100px;
+    font-family:serif;
+    margin-left:4vw;
+    font-weight:lighter;
+    font-size:13px;
+    height:500px;
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.sub{
+    font-weight:bold;
+    font-size:20px;
+    margin-top:-10px;
+}
+
+/*section5*/
+.foot{
+    width:100vw;
+    height:0px;
+    background-color:black;
+}
